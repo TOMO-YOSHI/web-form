@@ -67,7 +67,6 @@ export default {
     },
     methods: {
       addSkill(e) {
-        // console.log(e)
         if(e.key === ',' && this.tempSkill) {
           const skill = this.tempSkill.slice(0, this.tempSkill.length - 1)
           if(!this.skills.includes(skill)) {
@@ -78,8 +77,6 @@ export default {
         }
       },
       deleteSkill(skill) {
-        // console.log(e.target.innerText)
-        // this.skills.splice(this.skills.indexOf(e.target.innerText), 1)
         this.skills = this.skills.filter(item => {
           return item !== skill
         })
